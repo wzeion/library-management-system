@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F5F1E8;
+  --surface: #FFFDF8;
+  --primary: #6B3E26;
+  --secondary: #8B5E3C;
+  --accent: #D4AF37;
+  --text: #2C2C2C;
+  --border: #D1C7B7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-text: var(--text);
+  --color-border: var(--border);
+
+  --font-sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* Focus States for Keyboard Accessibility */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 3px solid var(--accent) !important;
+  outline-offset: 1px !important;
+}
